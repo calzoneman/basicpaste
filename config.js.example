@@ -1,0 +1,32 @@
+module.exports = function (config) {
+    /*
+     * Database configuration.
+     *
+     * See http://knexjs.org/#Installation-client
+     */
+    config.db = {
+        client: 'sqlite3',
+        connection: {
+            filename: 'paste.sqlite'
+        },
+
+        /*
+         * Number of base64 characters in a paste ID.
+         * Vary this to allow more/less unique pastes.
+         */
+        pasteIdLength: 4
+    };
+
+    /*
+     * Array of [host, port] pairs on which the application should listen.
+     */
+    config.listen = [
+        ['', 5000]
+    ];
+
+    /*
+     * Maximum size of a paste upload.  Uploads over this limit will be returned
+     * HTTP 413 (request entity too large)
+     */
+    config.uploadSizeLimit = '100kb';
+};

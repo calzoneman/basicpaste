@@ -1,0 +1,29 @@
+{
+  "name": "basicpaste",
+  "version": "0.0.1",
+  "description": "Basic pastebin server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@tirek.cyzon.us:basicpaste.git"
+  },
+  "keywords": [
+    "pastebin"
+  ],
+  "author": "Calvin Montgomery",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "bookshelf": "^0.7.9",
+    "express": "^4.10.6",
+    "knex": "^0.7.3",
+    "sqlite3": "^3.0.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.1.0"
+  }
+}
