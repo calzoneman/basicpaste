@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://git@tirek.cyzon.us:basicpaste.git"
+    "url": "http://git.cyzon.us/cyzon/basicpaste"
   },
   "keywords": [
     "pastebin"
