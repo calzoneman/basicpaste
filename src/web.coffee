@@ -28,7 +28,7 @@ class Webserver
         )
 
         @app.get('/:id', (req, res) =>
-            id = req.params.id
+            id = req.params.id.replace(/[^\w+_]/g, '')
             new @db.Paste(paste_id: id).fetch(require: true).then( (paste) ->
                 res.type('text').send(paste.get('content'))
             ).catch(@db.Paste.NotFoundError, (err) ->
