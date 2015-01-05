@@ -6,10 +6,12 @@ var config = {
         },
         pasteIdLength: 4
     },
-    
+
     listen: [
         ['', 5000]
     ],
+
+    trustProxy: 'loopback',
 
     uploadSizeLimit: '100kb'
 };

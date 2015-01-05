@@ -25,6 +25,11 @@ module.exports = function (config) {
     ];
 
     /*
+     * Value passed to app.set('trust proxy') in express
+     */
+    config.trustProxy = 'loopback';
+
+    /*
      * Maximum size of a paste upload.  Uploads over this limit will be returned
      * HTTP 413 (request entity too large)
      */

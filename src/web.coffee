@@ -4,7 +4,9 @@ path = require 'path'
 class Webserver
     constructor: (@config, @db) ->
         @app = express()
-        
+
+        @app.set('trust proxy', @config.trustProxy)
+
         @app.use(require('body-parser').urlencoded(
             limit: @config.uploadSizeLimit
             extended: false
